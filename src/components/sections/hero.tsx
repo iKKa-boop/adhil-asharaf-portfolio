@@ -15,7 +15,7 @@ export function Hero() {
     <section className="relative min-h-dvh flex flex-col justify-center section-padding pt-32 overflow-hidden">
       <div
         ref={globeRef}
-        className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[55vw] md:w-[40vw] max-w-[550px] opacity-20 md:opacity-25 pointer-events-none select-none"
+        className="absolute right-[-15%] top-1/2 -translate-y-1/2 w-[70vw] md:w-[55vw] max-w-[700px] opacity-20 md:opacity-25 pointer-events-none select-none"
       >
         <div className="aspect-square">
           <GlobePulse dark={1} speed={0.001} />
@@ -23,7 +23,7 @@ export function Hero() {
       </div>
       <div className="container-main relative z-10">
         <FadeIn>
-          <p className="font-mono text-xs tracking-widest text-accent uppercase mb-6">
+          <p className="font-mono text-xs tracking-widest uppercase mb-6 bg-gradient-to-r from-accent via-amber-400 to-accent bg-clip-text text-transparent">
             Linux System Administrator
           </p>
         </FadeIn>
