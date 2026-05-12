@@ -2,25 +2,28 @@
 
 import { experience } from "@/lib/data";
 import { FadeIn, Stagger } from "@/components/ui/animate";
+import { LampContainer } from "@/components/ui/lamp";
 import { motion } from "framer-motion";
 
 export function Experience() {
   return (
     <section id="experience" className="relative">
-      <div className="relative flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-32 lg:pt-40">
+      <LampContainer className="min-h-[50vh]">
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0.5, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-gradient-to-br from-accent to-amber-400 bg-clip-text text-transparent text-center text-4xl font-bold tracking-tight md:text-7xl z-10"
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="bg-gradient-to-br from-accent to-amber-400 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-7xl"
         >
           Experience
         </motion.h1>
-        <div className="absolute top-0 w-[40rem] h-56 bg-gradient-conic from-accent/30 via-transparent to-transparent [--conic-position:from_70deg_at_center_top] blur-3xl" />
-        <div className="absolute top-0 w-[40rem] h-56 bg-gradient-conic from-transparent via-transparent to-accent/30 [--conic-position:from_290deg_at_center_top] blur-3xl" />
-      </div>
+      </LampContainer>
 
-      <div className="container-main pb-16 md:pb-20 lg:pb-24">
+      <div className="container-main -mt-32 md:-mt-40 pb-16 md:pb-20 lg:pb-24 relative z-10">
         <Stagger className="relative">
           <div className="absolute left-0 top-0 bottom-0 w-px bg-border hidden md:block" />
 
