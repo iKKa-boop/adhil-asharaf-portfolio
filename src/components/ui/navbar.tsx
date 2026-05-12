@@ -17,7 +17,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="container-main flex items-center justify-between h-16">
-        <a href="#" className="text-sm font-semibold tracking-wider uppercase text-foreground">
+        <a href="#" className="text-sm font-semibold tracking-wider uppercase text-foreground border border-border px-3 py-1.5">
           AA
         </a>
 

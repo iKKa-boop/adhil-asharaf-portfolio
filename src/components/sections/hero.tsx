@@ -4,6 +4,7 @@ import { personal } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/animate";
 import { GlobePulse } from "@/components/ui/globe-pulse";
+import { SparklesCore } from "@/components/ui/sparkles";
 import { ArrowDown } from "lucide-react";
 import { useRef } from "react";
 
@@ -14,7 +15,7 @@ export function Hero() {
     <section className="relative min-h-dvh flex flex-col justify-center section-padding pt-32 overflow-hidden">
       <div
         ref={globeRef}
-        className="absolute right-[-20%] top-1/2 -translate-y-1/2 w-[60vw] md:w-[45vw] max-w-[600px] opacity-20 md:opacity-25 pointer-events-none select-none"
+        className="absolute right-[-5%] top-1/2 -translate-y-1/2 w-[55vw] md:w-[40vw] max-w-[550px] opacity-20 md:opacity-25 pointer-events-none select-none"
       >
         <div className="aspect-square">
           <GlobePulse dark={1} speed={0.001} />
@@ -28,11 +29,29 @@ export function Hero() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none text-foreground">
-            {personal.name.split(" ")[0]}
-            <br />
-            {personal.name.split(" ").slice(1).join(" ")}
-          </h1>
+          <div className="relative">
+            <div className="absolute inset-0 h-40 -top-8">
+              <SparklesCore
+                background="transparent"
+                minSize={0.4}
+                maxSize={1}
+                particleDensity={800}
+                className="w-full h-full"
+                particleColor="#ff3d00"
+                speed={2}
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
+            </div>
+            <div className="relative">
+              <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-accent to-transparent h-[2px] w-full blur-sm" />
+              <div className="absolute inset-x-0 -top-1 bg-gradient-to-r from-transparent via-accent to-transparent h-px w-full" />
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none text-foreground pt-8">
+                {personal.name.split(" ")[0]}
+                <br />
+                {personal.name.split(" ").slice(1).join(" ")}
+              </h1>
+            </div>
+          </div>
         </FadeIn>
 
         <FadeIn delay={0.2}>
