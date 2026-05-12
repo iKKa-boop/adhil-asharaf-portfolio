@@ -146,6 +146,30 @@ export const projects = [
       "Manage physical and virtual infrastructure for 50+ enterprise clients including hardware provisioning, RAID configuration, iSCSI storage, and multipathing. Maintained 99.9% SLA compliance.",
     tech: ["RAID", "iSCSI", "Multipathing", "Server Provisioning"],
   },
+  {
+    title: "Abuse Operations Console V2",
+    description:
+      "Internal abuse reporting tool with browser extension for URL checking, report generation, and evidence logging. Containerized with Docker for easy deployment and scaling. Streamlined abuse handling workflow for FDC Servers support team.",
+    tech: ["Browser Extension", "Node.js", "Docker", "nginx"],
+  },
+  {
+    title: "WHMCS Ticket Logger",
+    description:
+      "Browser extension (Chrome & Firefox) that automatically logs WHMCS support tickets when replies are submitted. Improved ticket tracking efficiency and reduced manual logging overhead for FDC Servers support team.",
+    tech: ["Browser Extension", "JavaScript", "WHMCS", "Chrome", "Firefox"],
+  },
+  {
+    title: "Support Toolbox",
+    description:
+      "Collection of bash scripts for FDC Servers support team. Includes diagnostic tools, automation scripts, and integration scripts for WHMCS, EasyDCIM, LibreNMS, and Proxmox. Containerized where applicable for consistent execution across environments. Speeds up repeat operational tasks.",
+    tech: ["Bash", "Automation", "WHMCS", "Proxmox", "EasyDCIM", "Docker"],
+  },
+  {
+    title: "Outline Knowledge Base",
+    description:
+      "Self-hosted wiki and knowledge base for FDC Servers support team. Contains all SOPs, edge cases, troubleshooting guides, and operational documentation built up over the course of work. Containerized with Docker Compose for easy deployment. Enables consistent ticket resolution and knowledge sharing across the team.",
+    tech: ["Node.js", "PostgreSQL", "Redis", "MinIO", "Docker"],
+  },
 ] as const;
 
 export const education = [
