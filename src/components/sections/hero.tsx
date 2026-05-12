@@ -23,7 +23,7 @@ export function Hero() {
       </div>
       <div className="container-main relative z-10">
         <FadeIn>
-          <p className="font-mono text-xs tracking-[0.15em] text-white/80 uppercase mb-6 drop-shadow-[0_0_8px_rgba(255,61,0,0.5)]">
+          <p className="font-mono text-xs tracking-[0.15em] uppercase mb-6 bg-gradient-to-r from-red-400 via-accent to-red-800 bg-clip-text text-transparent">
             Linux System Administrator
           </p>
         </FadeIn>
