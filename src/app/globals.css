@@ -2,19 +2,20 @@
 
 @theme inline {
   --color-background: #0a0a0a;
-  --color-foreground: #fafafa;
-  --color-muted: #1a1a1a;
-  --color-muted-foreground: #737373;
-  --color-accent: #ff3d00;
+  --color-surface: #111111;
+  --color-foreground: #ffffff;
+  --color-muted: #444444;
+  --color-muted-foreground: #888888;
+  --color-accent: #e8500a;
   --color-accent-foreground: #0a0a0a;
-  --color-border: #262626;
-  --color-input: #1a1a1a;
-  --color-card: #0f0f0f;
-  --color-card-foreground: #fafafa;
-  --color-ring: #ff3d00;
+  --color-border: #1f1f1f;
+  --color-input: #1f1f1f;
+  --color-card: #111111;
+  --color-card-foreground: #ffffff;
+  --color-ring: #e8500a;
 
-  --font-sans: var(--font-inter-tight), system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), "Fira Code", monospace;
+  --font-sans: var(--font-inter-tight), 'Inter', system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), 'Fira Code', monospace;
 
   --radius: 0px;
 }
@@ -50,7 +51,7 @@ body::before {
 }
 
 @utility container-main {
-  max-width: 1200px;
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
@@ -68,16 +69,30 @@ body::before {
 }
 
 @utility section-padding {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
 
   @media (width >= 48rem) {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
   }
 
   @media (width >= 64rem) {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
   }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
 }

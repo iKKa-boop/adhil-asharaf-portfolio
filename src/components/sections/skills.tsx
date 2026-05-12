@@ -6,30 +6,30 @@ import { FadeIn, Stagger } from "@/components/ui/animate";
 
 export function Skills() {
   return (
-    <Section id="skills" className="bg-muted">
+    <Section id="skills" className="section-padding">
       <FadeIn>
-        <p className="font-mono text-xs tracking-widest text-accent uppercase mb-4">
+        <p className="text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent mb-3">
           Expertise
         </p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-16">
+        <h2 className="text-[2.5rem] md:text-[3rem] font-bold tracking-tight text-foreground mb-8">
           Skills
         </h2>
       </FadeIn>
 
-      <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+      <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#1f1f1f]">
         {skills.map((category) => (
           <FadeIn
             key={category.category}
-            className="bg-background p-6 md:p-8 flex flex-col"
+            className="bg-[#111111] p-6"
           >
-            <p className="font-mono text-[10px] tracking-widest text-accent uppercase mb-4">
+            <p className="text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent mb-4">
               {category.category}
             </p>
             <div className="flex flex-wrap gap-2">
               {category.items.map((skill) => (
                 <span
                   key={skill}
-                  className="text-xs text-muted-foreground tracking-wide border border-border px-3 py-1.5"
+                  className="text-[0.75rem] text-[#cccccc] border border-[#2a2a2a] px-2.5 py-1 rounded-[2px]"
                 >
                   {skill}
                 </span>

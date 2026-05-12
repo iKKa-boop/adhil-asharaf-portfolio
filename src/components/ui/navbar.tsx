@@ -15,9 +15,9 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-[#1f1f1f]">
       <nav className="container-main flex items-center justify-between h-16">
-        <a href="#" className="text-sm font-semibold tracking-wider uppercase text-foreground border border-border px-3 py-1.5">
+        <a href="#" className="text-sm font-semibold tracking-[0.15em] uppercase text-foreground border border-[#1f1f1f] px-3 py-1.5">
           AA
         </a>
 
@@ -26,7 +26,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-150 tracking-wide uppercase"
+              className="text-[0.75rem] text-muted-foreground hover:text-foreground transition-colors duration-150 tracking-[0.15em] uppercase"
             >
               {link.label}
             </a>
@@ -43,14 +43,14 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="md:hidden border-t border-[#1f1f1f] bg-[#0a0a0a]">
           <div className="container-main flex flex-col py-6 gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-150 tracking-wide uppercase py-2"
+                className="text-[0.75rem] text-muted-foreground hover:text-foreground transition-colors duration-150 tracking-[0.15em] uppercase py-2"
               >
                 {link.label}
               </a>

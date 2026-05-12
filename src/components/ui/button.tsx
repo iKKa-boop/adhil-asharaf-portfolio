@@ -14,17 +14,17 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "text-accent uppercase font-semibold tracking-wider px-0 py-2.5 gap-2.5 inline-flex items-center whitespace-nowrap group",
+    "text-accent uppercase font-medium tracking-[0.15em] px-0 py-3 gap-3 inline-flex items-center whitespace-nowrap group h-11",
   secondary:
-    "text-foreground uppercase font-semibold tracking-wider border border-foreground px-6 py-2.5 inline-flex items-center gap-2 whitespace-nowrap hover:bg-foreground hover:text-background transition-colors duration-150",
+    "text-foreground uppercase font-medium tracking-[0.15em] border border-[#1f1f1f] px-6 py-3 inline-flex items-center gap-3 whitespace-nowrap hover:bg-[#1f1f1f] hover:text-foreground transition-colors duration-150 h-11",
   ghost:
-    "text-muted-foreground uppercase font-semibold tracking-wider px-4 py-2 inline-flex items-center whitespace-nowrap hover:text-foreground transition-colors duration-150 group",
+    "text-muted-foreground uppercase font-medium tracking-[0.15em] px-4 py-3 inline-flex items-center whitespace-nowrap hover:text-foreground transition-colors duration-150 group h-11",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: "text-xs py-2",
-  default: "text-sm",
-  lg: "text-base py-4",
+  sm: "text-xs py-2 h-9",
+  default: "text-sm py-3 h-11",
+  lg: "text-sm py-3 h-11",
 };
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -46,7 +46,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {variant === "primary" && (
           <>
             {children}
-            <span className="absolute bottom-0 left-0 h-0.5 w-full bg-accent origin-left transition-transform duration-150 group-hover:scale-x-110" />
+            <span className="absolute bottom-0 left-0 h-[2px] w-full bg-accent origin-left transition-transform duration-150 group-hover:scale-x-110" />
           </>
         )}
         {variant === "secondary" && children}

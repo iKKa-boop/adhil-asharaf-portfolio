@@ -4,18 +4,13 @@ import { personal } from "@/lib/data";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/animate";
 import { GlobePulse } from "@/components/ui/globe-pulse";
-import { SparklesCore } from "@/components/ui/sparkles";
 import { ArrowDown } from "lucide-react";
-import { useRef } from "react";
 
 export function Hero() {
-  const globeRef = useRef<HTMLDivElement>(null);
-
   return (
-    <section className="relative min-h-dvh flex flex-col justify-center section-padding overflow-hidden">
+    <section className="relative min-h-screen flex items-center">
       <div
-        ref={globeRef}
-        className="absolute right-[-15%] top-1/2 -translate-y-1/2 w-[70vw] md:w-[55vw] max-w-[700px] opacity-20 md:opacity-25 pointer-events-none select-none"
+        className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[60vw] md:w-[45vw] max-w-[600px] opacity-30 pointer-events-none select-none"
       >
         <div className="aspect-square">
           <GlobePulse dark={1} speed={0.001} />
@@ -23,45 +18,27 @@ export function Hero() {
       </div>
       <div className="container-main relative z-10">
         <FadeIn>
-          <p className="font-mono text-xs tracking-[0.15em] mb-6 bg-gradient-to-b from-red-800 via-accent to-red-400 bg-clip-text text-transparent">
+          <p className="text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent mb-3">
             Linux System Administrator
           </p>
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <div className="relative">
-            <div className="absolute inset-0 h-40 -top-8">
-              <SparklesCore
-                background="transparent"
-                minSize={0.4}
-                maxSize={1}
-                particleDensity={800}
-                className="w-full h-full"
-                particleColor="#ff3d00"
-                speed={2}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background" />
-            </div>
-            <div className="relative">
-              <div className="absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-accent to-transparent h-[2px] w-full blur-sm" />
-              <div className="absolute inset-x-0 -top-1 bg-gradient-to-r from-transparent via-accent to-transparent h-px w-full" />
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-none text-foreground pt-8">
-                {personal.name.split(" ")[0]}
-                <br />
-                {personal.name.split(" ").slice(1).join(" ")}
-              </h1>
-            </div>
-          </div>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none text-foreground">
+            {personal.name.split(" ")[0]}
+            <br />
+            {personal.name.split(" ").slice(1).join(" ")}
+          </h1>
         </FadeIn>
 
         <FadeIn delay={0.2}>
-          <p className="mt-8 text-base md:text-lg text-muted-foreground max-w-2xl leading-normal">
+          <p className="mt-8 text-[0.9rem] leading-[1.7] text-muted-foreground max-w-2xl">
             {personal.summary}
           </p>
         </FadeIn>
 
         <FadeIn delay={0.3}>
-          <div className="mt-10 flex flex-wrap items-center gap-8">
+          <div className="mt-10 flex flex-wrap items-center gap-6">
             <a href="#contact">
               <Button variant="primary" size="lg">
                 Get in Touch
@@ -77,24 +54,24 @@ export function Hero() {
         </FadeIn>
 
         <FadeIn delay={0.4}>
-          <div className="mt-20 flex flex-wrap gap-x-10 gap-y-3">
+          <div className="mt-20 flex flex-wrap gap-x-12 gap-y-6">
             <div>
-              <p className="text-[10px] tracking-widest text-muted-foreground uppercase">
+              <p className="text-[0.7rem] tracking-[0.15em] font-medium uppercase text-muted mb-1">
                 Location
               </p>
-              <p className="text-sm text-foreground mt-1">{personal.location}</p>
+              <p className="text-[0.9rem] text-foreground">{personal.location}</p>
             </div>
             <div>
-              <p className="text-[10px] tracking-widest text-muted-foreground uppercase">
+              <p className="text-[0.7rem] tracking-[0.15em] font-medium uppercase text-muted mb-1">
                 Email
               </p>
-              <p className="text-sm text-foreground mt-1">{personal.email}</p>
+              <p className="text-[0.9rem] text-foreground">{personal.email}</p>
             </div>
             <div>
-              <p className="text-[10px] tracking-widest text-muted-foreground uppercase">
+              <p className="text-[0.7rem] tracking-[0.15em] font-medium uppercase text-muted mb-1">
                 LinkedIn
               </p>
-              <p className="text-sm text-foreground mt-1">{personal.linkedin}</p>
+              <p className="text-[0.9rem] text-foreground">{personal.linkedin}</p>
             </div>
           </div>
         </FadeIn>

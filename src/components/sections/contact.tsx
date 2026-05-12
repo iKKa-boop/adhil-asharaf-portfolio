@@ -8,13 +8,13 @@ import { ArrowRight } from "lucide-react";
 
 export function Contact() {
   return (
-    <Section id="contact" className="!py-24 md:!py-32">
+    <Section id="contact" className="section-padding border-t border-[#1f1f1f]">
       <div className="max-w-3xl mx-auto text-center">
         <FadeIn>
-          <p className="font-mono text-xs tracking-widest text-accent uppercase mb-4">
+          <p className="text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent mb-3">
             Connect
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-foreground leading-none">
+          <h2 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] font-bold tracking-tighter text-foreground leading-none">
             Let&apos;s work
             <br />
             together
@@ -22,7 +22,7 @@ export function Contact() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <p className="mt-8 text-base md:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
+          <p className="mt-8 text-[0.9rem] text-muted-foreground leading-[1.7] max-w-xl mx-auto">
             Available for system administration roles, infrastructure consulting,
             and automation projects.
           </p>
@@ -40,7 +40,7 @@ export function Contact() {
               href={`https://${personal.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-150 tracking-wide uppercase"
+              className="text-[0.9rem] text-muted-foreground hover:text-foreground transition-colors duration-150 tracking-[0.15em] uppercase"
             >
               LinkedIn &rarr;
             </a>

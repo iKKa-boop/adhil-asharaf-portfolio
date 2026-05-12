@@ -2,65 +2,55 @@
 
 import { experience } from "@/lib/data";
 import { FadeIn, Stagger } from "@/components/ui/animate";
-import { LampContainer } from "@/components/ui/lamp";
-import { motion } from "framer-motion";
 
 export function Experience() {
   return (
-    <section id="experience" className="relative">
-      <LampContainer className="min-h-[50vh]">
-        <motion.h1
-          initial={{ opacity: 0.5, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="bg-gradient-to-br from-accent to-amber-400 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-7xl"
-        >
-          Experience
-        </motion.h1>
-      </LampContainer>
+    <section id="experience" className="section-padding border-t border-[#1f1f1f]">
+      <div className="container-main">
+        <FadeIn>
+          <p className="text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent mb-3">
+            Work
+          </p>
+          <h2 className="text-[2.5rem] md:text-[3rem] font-bold tracking-tight text-foreground mb-8">
+            Experience
+          </h2>
+        </FadeIn>
 
-      <div className="container-main -mt-32 md:-mt-40 pb-16 md:pb-20 lg:pb-24 relative z-10">
-        <Stagger className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-px bg-border hidden md:block" />
+        <div className="relative">
+          <div className="absolute left-[7px] top-0 bottom-0 w-px bg-[#1f1f1f] hidden md:block" />
 
-          {experience.map((job) => (
-            <FadeIn key={`${job.company}-${job.role}`}>
-              <div className="relative pl-0 md:pl-12 pt-12 md:pt-16 first:pt-0 pb-12 md:pb-16 last:pb-0 border-b border-border last:border-b-0">
-                <div className="hidden md:block absolute left-[-4.5px] top-[1.85rem] md:top-[2.35rem] w-2 h-2 bg-border rotate-45" />
+          {experience.map((job, i) => (
+            <FadeIn key={`${job.company}-${job.role}`} className="relative pl-8 md:pl-12 pb-12 last:pb-0">
+              <div className="hidden md:block absolute left-[5px] top-[1.1rem] w-1.5 h-1.5 bg-accent rounded-full" />
 
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 mb-4">
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground tracking-tight">
-                      {job.role}
-                    </h3>
-                    <p className="text-sm text-muted-foreground tracking-wide mt-0.5">
-                      {job.company} — {job.location}
-                    </p>
-                  </div>
-                  <p className="text-xs text-muted-foreground font-mono tracking-wider whitespace-nowrap">
-                    {job.period}
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-8 mb-4">
+                <div>
+                  <h3 className="text-[1.1rem] font-semibold text-foreground tracking-tight">
+                    {job.role}
+                  </h3>
+                  <p className="text-[0.9rem] text-muted-foreground mt-1">
+                    {job.company} — {job.location}
                   </p>
                 </div>
-
-                <ul className="space-y-2">
-                  {job.highlights.map((highlight) => (
-                    <li
-                      key={highlight}
-                      className="text-sm text-muted-foreground leading-relaxed pl-4 relative"
-                    >
-                      <span className="absolute left-0 top-[0.6em] w-1 h-1 bg-accent" />
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-[0.8rem] font-mono text-muted-foreground tracking-wider whitespace-nowrap">
+                  {job.period}
+                </p>
               </div>
+
+              <ul className="space-y-2">
+                {job.highlights.map((highlight) => (
+                  <li
+                    key={highlight}
+                    className="text-[0.9rem] text-muted-foreground leading-[1.7] pl-4 relative"
+                  >
+                    <span className="absolute left-0 text-accent">•</span>
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
             </FadeIn>
           ))}
-        </Stagger>
+        </div>
       </div>
     </section>
   );
