@@ -12,7 +12,7 @@ export function Hero() {
   const globeRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="relative min-h-dvh flex flex-col justify-center section-padding pt-32 overflow-hidden">
+    <section className="relative min-h-dvh flex flex-col justify-center section-padding overflow-hidden">
       <div
         ref={globeRef}
         className="absolute right-[-15%] top-1/2 -translate-y-1/2 w-[70vw] md:w-[55vw] max-w-[700px] opacity-20 md:opacity-25 pointer-events-none select-none"

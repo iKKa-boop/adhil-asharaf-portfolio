@@ -1,30 +1,29 @@
 "use client";
 
 import { experience } from "@/lib/data";
-import { Section } from "@/components/ui/section";
 import { FadeIn, Stagger } from "@/components/ui/animate";
 import { LampContainer } from "@/components/ui/lamp";
 import { motion } from "framer-motion";
 
 export function Experience() {
   return (
-    <>
-      <LampContainer className="min-h-[80vh]">
+    <section id="experience" className="relative overflow-hidden">
+      <LampContainer className="min-h-[35vh]">
         <motion.h1
-          initial={{ opacity: 0.5, y: 100 }}
+          initial={{ opacity: 0.5, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{
             delay: 0.3,
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="mt-8 bg-gradient-to-br from-accent to-amber-400 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-7xl"
+          className="bg-gradient-to-br from-accent to-amber-400 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-7xl"
         >
           Experience
         </motion.h1>
       </LampContainer>
 
-      <Section id="experience" className="-mt-40 relative z-10">
+      <div className="container-main pb-16 md:pb-20 lg:pb-24">
         <Stagger className="relative">
           <div className="absolute left-0 top-0 bottom-0 w-px bg-border hidden md:block" />
 
@@ -62,7 +61,7 @@ export function Experience() {
             </FadeIn>
           ))}
         </Stagger>
-      </Section>
-    </>
+      </div>
+    </section>
   );
 }

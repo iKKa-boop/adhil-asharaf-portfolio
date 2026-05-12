@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Contact() {
   return (
-    <Section id="contact" className="!py-40">
+    <Section id="contact" className="!py-24 md:!py-32">
       <div className="max-w-3xl mx-auto text-center">
         <FadeIn>
           <p className="font-mono text-xs tracking-widest text-accent uppercase mb-4">
