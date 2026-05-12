@@ -13,9 +13,8 @@
   --color-card-foreground: #fafafa;
   --color-ring: #ff3d00;
 
-  --font-sans: "Inter Tight", "Inter", system-ui, sans-serif;
-  --font-display: "Playfair Display", Georgia, serif;
-  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --font-sans: var(--font-inter-tight), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "Fira Code", monospace;
 
   --radius: 0px;
 }

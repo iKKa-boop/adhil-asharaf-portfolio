@@ -3,7 +3,6 @@ export const personal = {
   title: "Linux System Administrator",
   location: "Pathanamthitta, Kerala",
   email: "adhilasharaf07@gmail.com",
-  phone: "+91 85905 40298",
   linkedin: "linkedin.com/in/adhil-asharaf",
   summary:
     "Linux System Administrator with expertise in server administration, virtualization (Proxmox, Docker), networking, and automation scripting. Led OnApp-to-Proxmox migration (100+ VMs), developed NIC firmware automation (Intel/Mellanox/Broadcom), and manages 50+ enterprise clients with 99.9% SLA compliance.",

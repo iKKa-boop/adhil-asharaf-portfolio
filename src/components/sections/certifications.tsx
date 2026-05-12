@@ -64,7 +64,6 @@ export function Certifications() {
             <div className="mt-10">
               <a
                 href="/Adhil_Asharaf_Linux_System_Administrator_Resume.pdf"
-                target="_blank"
                 download
               >
                 <Button variant="secondary" size="default">

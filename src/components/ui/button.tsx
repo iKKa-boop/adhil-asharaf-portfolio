@@ -16,7 +16,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   primary:
     "text-accent uppercase font-semibold tracking-wider px-0 py-2.5 gap-2.5 inline-flex items-center whitespace-nowrap group",
   secondary:
-    "text-foreground uppercase font-semibold tracking-wider border border-foreground px-6 py-2.5 inline-flex items-center whitespace-nowrap hover:bg-foreground hover:text-background transition-colors duration-150",
+    "text-foreground uppercase font-semibold tracking-wider border border-foreground px-6 py-2.5 inline-flex items-center gap-2 whitespace-nowrap hover:bg-foreground hover:text-background transition-colors duration-150",
   ghost:
     "text-muted-foreground uppercase font-semibold tracking-wider px-4 py-2 inline-flex items-center whitespace-nowrap hover:text-foreground transition-colors duration-150 group",
 };

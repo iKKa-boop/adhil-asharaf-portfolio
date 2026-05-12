@@ -49,7 +49,7 @@ export function Hero() {
                 <ArrowDown size={16} className="rotate-[-90deg]" />
               </Button>
             </a>
-            <a href="/resume" target="_blank">
+            <a href="/Adhil_Asharaf_Linux_System_Administrator_Resume.pdf" target="_blank">
               <Button variant="secondary" size="default">
                 View Resume
               </Button>
