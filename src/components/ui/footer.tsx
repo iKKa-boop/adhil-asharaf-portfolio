@@ -34,7 +34,7 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-          <p className="text-[0.7rem] text-muted-foreground tracking-[0.15em] uppercase">
+          <p className="text-[0.7rem] text-muted-foreground tracking-[0.15em] uppercase font-mono">
             &copy; {year} {personal.name}
           </p>
           <a
