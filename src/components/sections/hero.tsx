@@ -9,10 +9,7 @@ import { ArrowDown } from "lucide-react";
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center">
-      <div className="terminal-frame absolute right-[-10%] top-1/2 -translate-y-1/2 w-[60vw] md:w-[45vw] max-w-[600px] opacity-30 pointer-events-none select-none">
-        <div className="text-[0.6rem] text-muted-foreground tracking-wider uppercase mb-1">
-          [ globe ]
-        </div>
+      <div className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[60vw] md:w-[45vw] max-w-[600px] opacity-30 pointer-events-none select-none">
         <div className="aspect-square">
           <GlobePulse dark={1} speed={0.001} />
         </div>

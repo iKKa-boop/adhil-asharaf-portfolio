@@ -17,11 +17,11 @@ export function Projects() {
         </h2>
       </FadeIn>
 
-      <Stagger className="divide-y divide-[#1f1f1f]">
+      <Stagger className="divide-y divide-[#1a1a2e] border border-[#1a1a2e] bg-[#0d0d0d]">
         {projects.map((project) => (
           <FadeIn
             key={project.title}
-            className="terminal-frame py-12 first:pt-0 last:pb-0"
+            className="py-12 px-6 first:pt-0 last:pb-0"
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
               <div className="flex items-center gap-3">

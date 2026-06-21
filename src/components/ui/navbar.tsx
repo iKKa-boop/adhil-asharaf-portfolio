@@ -77,7 +77,7 @@ export function Navbar() {
                 )}
               >
                 {isActive && (
-                  <span className="text-[#e8500a] mr-1">▸</span>
+                  <span className="text-[#e8500a] mr-2">▸ </span>
                 )}
                 {link.label}
               </a>
