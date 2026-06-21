@@ -8,7 +8,7 @@
   --color-muted-foreground: #888888;
   --color-accent: #e8500a;
   --color-accent-foreground: #0a0a0a;
-  --color-border: #1f1f1f;
+  --color-border: #1a1a2e;
   --color-input: #1f1f1f;
   --color-card: #111111;
   --color-card-foreground: #ffffff;
@@ -30,6 +30,21 @@
 
 body {
   background-color: var(--color-background);
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.005) 2px,
+      rgba(255, 255, 255, 0.005) 4px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.005) 2px,
+      rgba(255, 255, 255, 0.005) 4px
+    );
   color: var(--color-foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -39,6 +54,11 @@ body {
 ::selection {
   background-color: var(--color-accent);
   color: var(--color-accent-foreground);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 body::before {
@@ -81,6 +101,22 @@ body::before {
     padding-top: 7.5rem;
     padding-bottom: 7.5rem;
   }
+}
+
+@utility terminal-frame {
+  border: 1px solid #1a1a2e;
+  background-color: #0d0d0d;
+  border-top-color: var(--color-accent);
+}
+
+@utility terminal-prompt {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+@utility terminal-output {
+  color: var(--color-muted-foreground);
+  font-family: var(--font-mono);
 }
 
 /* Scrollbar styling */
