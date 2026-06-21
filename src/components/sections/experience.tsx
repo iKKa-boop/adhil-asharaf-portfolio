@@ -8,8 +8,8 @@ export function Experience() {
     <section id="experience" className="section-padding border-t border-[#1f1f1f]">
       <div className="container-main">
         <FadeIn>
-          <p className="text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent mb-3">
-            Work
+          <p className="terminal-prompt text-[0.7rem] font-medium tracking-[0.15em] uppercase mb-3">
+            $ work_log --recent
           </p>
           <h2 className="text-[2.5rem] md:text-[3rem] font-bold tracking-tight text-foreground mb-8">
             Experience
@@ -26,14 +26,14 @@ export function Experience() {
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-8 mb-4">
                 <div>
                   <h3 className="text-[1.1rem] font-semibold text-foreground tracking-tight">
-                    {job.role}
+                    <span className="text-accent font-mono">❯ </span>{job.role}
                   </h3>
                   <p className="text-[0.9rem] text-muted-foreground mt-1">
                     {job.company} — {job.location}
                   </p>
                 </div>
                 <p className="text-[0.8rem] font-mono text-muted-foreground tracking-wider whitespace-nowrap">
-                  {job.period}
+                  [ {job.period} ]
                 </p>
               </div>
 

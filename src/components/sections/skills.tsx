@@ -8,8 +8,8 @@ export function Skills() {
   return (
     <Section id="skills" className="section-padding">
       <FadeIn>
-        <p className="text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent mb-3">
-          Expertise
+        <p className="terminal-prompt text-[0.7rem] font-medium tracking-[0.15em] uppercase mb-3">
+          $ skills --list
         </p>
         <h2 className="text-[2.5rem] md:text-[3rem] font-bold tracking-tight text-foreground mb-8">
           Skills
@@ -23,13 +23,13 @@ export function Skills() {
             className="bg-[#111111] p-6"
           >
             <p className="text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent mb-4">
-              {category.category}
+              [ {category.category} ]
             </p>
             <div className="flex flex-wrap gap-2">
               {category.items.map((skill) => (
                 <span
                   key={skill}
-                  className="text-[0.75rem] text-[#cccccc] border border-[#2a2a2a] px-2.5 py-1 rounded-[2px]"
+                  className="text-[0.75rem] text-[#cccccc] border border-[#2a2a2a] px-2.5 py-1 rounded-[2px] hover:border-accent hover:text-accent transition-colors duration-150"
                 >
                   {skill}
                 </span>
