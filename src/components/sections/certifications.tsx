@@ -12,8 +12,8 @@ export function Certifications() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
         <div>
           <FadeIn>
-            <p className="text-[0.7rem] font-medium tracking-[0.15em] uppercase text-accent mb-3">
-              Credentials
+            <p className="terminal-prompt text-[0.7rem] font-medium tracking-[0.15em] uppercase mb-3">
+              $ education --history
             </p>
             <h2 className="text-[2.5rem] md:text-[3rem] font-bold tracking-tight text-foreground mb-8">
               Education &amp; Certifications
@@ -39,9 +39,9 @@ export function Certifications() {
 
         <div>
           <FadeIn delay={0.1}>
-            <h3 className="text-[1rem] font-semibold text-foreground tracking-tight mb-8">
-              Certifications
-            </h3>
+            <p className="terminal-prompt text-[0.7rem] font-medium tracking-[0.15em] uppercase mb-8">
+              $ certs --verify
+            </p>
           </FadeIn>
 
           <Stagger>
@@ -68,7 +68,7 @@ export function Certifications() {
               >
                 <Button variant="secondary" size="default">
                   <Download size={14} />
-                  Download Resume
+                  $ wget resume.pdf
                 </Button>
               </a>
             </div>

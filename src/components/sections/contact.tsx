@@ -32,7 +32,7 @@ export function Contact() {
           <div className="mt-10 flex flex-col items-center gap-4">
             <a href={`mailto:${personal.email}`}>
               <Button variant="primary" size="lg">
-                {personal.email}
+                <span className="font-mono">$ mail --to {personal.email}</span>
                 <ArrowRight size={16} />
               </Button>
             </a>
@@ -40,9 +40,9 @@ export function Contact() {
               href={`https://${personal.linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[0.9rem] text-muted-foreground hover:text-foreground transition-colors duration-150 tracking-[0.15em] uppercase"
+              className="font-mono text-[0.9rem] text-muted-foreground hover:text-foreground transition-colors duration-150 tracking-[0.15em] uppercase"
             >
-              LinkedIn &rarr;
+              $ cat linkedin
             </a>
           </div>
         </FadeIn>
